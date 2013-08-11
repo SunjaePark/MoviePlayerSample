@@ -7,20 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		576E958517B76771004DA52C /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 576E958417B76771004DA52C /* Storyboard.storyboard */; };
 		579BE55217B71EEB00FD9118 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 579BE55117B71EEB00FD9118 /* Foundation.framework */; };
 		579BE55417B71EEB00FD9118 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 579BE55317B71EEB00FD9118 /* CoreGraphics.framework */; };
 		579BE55617B71EEB00FD9118 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 579BE55517B71EEB00FD9118 /* UIKit.framework */; };
 		579BE55C17B71EEB00FD9118 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 579BE55A17B71EEB00FD9118 /* InfoPlist.strings */; };
 		579BE55E17B71EEB00FD9118 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 579BE55D17B71EEB00FD9118 /* main.m */; };
 		579BE56217B71EEB00FD9118 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 579BE56117B71EEB00FD9118 /* AppDelegate.m */; };
-		579BE56517B71EEB00FD9118 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 579BE56317B71EEB00FD9118 /* Main.storyboard */; };
-		579BE56817B71EEB00FD9118 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 579BE56717B71EEB00FD9118 /* ViewController.m */; };
+		579BE56817B71EEB00FD9118 /* LocalMoviePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 579BE56717B71EEB00FD9118 /* LocalMoviePlayerViewController.m */; };
 		579BE56A17B71EEB00FD9118 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 579BE56917B71EEB00FD9118 /* Images.xcassets */; };
 		579BE57117B71EEB00FD9118 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 579BE57017B71EEB00FD9118 /* XCTest.framework */; };
 		579BE57217B71EEB00FD9118 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 579BE55117B71EEB00FD9118 /* Foundation.framework */; };
 		579BE57317B71EEB00FD9118 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 579BE55517B71EEB00FD9118 /* UIKit.framework */; };
 		579BE57B17B71EEB00FD9118 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 579BE57917B71EEB00FD9118 /* InfoPlist.strings */; };
 		579BE57D17B71EEB00FD9118 /* MoviePlayerSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 579BE57C17B71EEB00FD9118 /* MoviePlayerSampleTests.m */; };
+		57F0293017B75B4700E08498 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57F0292F17B75B4700E08498 /* MediaPlayer.framework */; };
+		57F0293217B75DA500E08498 /* Movie.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 57F0293117B75D6E00E08498 /* Movie.m4v */; };
+		57F0293717B75F3800E08498 /* StreamingMoviePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F0293617B75F3800E08498 /* StreamingMoviePlayerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		576E958417B76771004DA52C /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		579BE54E17B71EEB00FD9118 /* MoviePlayerSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoviePlayerSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		579BE55117B71EEB00FD9118 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		579BE55317B71EEB00FD9118 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -44,15 +48,18 @@
 		579BE55F17B71EEB00FD9118 /* MoviePlayerSample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MoviePlayerSample-Prefix.pch"; sourceTree = "<group>"; };
 		579BE56017B71EEB00FD9118 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		579BE56117B71EEB00FD9118 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		579BE56417B71EEB00FD9118 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		579BE56617B71EEB00FD9118 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		579BE56717B71EEB00FD9118 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		579BE56617B71EEB00FD9118 /* LocalMoviePlayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocalMoviePlayerViewController.h; sourceTree = "<group>"; };
+		579BE56717B71EEB00FD9118 /* LocalMoviePlayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocalMoviePlayerViewController.m; sourceTree = "<group>"; };
 		579BE56917B71EEB00FD9118 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		579BE56F17B71EEB00FD9118 /* MoviePlayerSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoviePlayerSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		579BE57017B71EEB00FD9118 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		579BE57817B71EEB00FD9118 /* MoviePlayerSampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MoviePlayerSampleTests-Info.plist"; sourceTree = "<group>"; };
 		579BE57A17B71EEB00FD9118 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		579BE57C17B71EEB00FD9118 /* MoviePlayerSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoviePlayerSampleTests.m; sourceTree = "<group>"; };
+		57F0292F17B75B4700E08498 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		57F0293117B75D6E00E08498 /* Movie.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = Movie.m4v; sourceTree = "<group>"; };
+		57F0293517B75F3800E08498 /* StreamingMoviePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreamingMoviePlayerViewController.h; sourceTree = "<group>"; };
+		57F0293617B75F3800E08498 /* StreamingMoviePlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreamingMoviePlayerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57F0293017B75B4700E08498 /* MediaPlayer.framework in Frameworks */,
 				579BE55417B71EEB00FD9118 /* CoreGraphics.framework in Frameworks */,
 				579BE55617B71EEB00FD9118 /* UIKit.framework in Frameworks */,
 				579BE55217B71EEB00FD9118 /* Foundation.framework in Frameworks */,
@@ -101,6 +109,7 @@
 		579BE55017B71EEB00FD9118 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				57F0292F17B75B4700E08498 /* MediaPlayer.framework */,
 				579BE55117B71EEB00FD9118 /* Foundation.framework */,
 				579BE55317B71EEB00FD9118 /* CoreGraphics.framework */,
 				579BE55517B71EEB00FD9118 /* UIKit.framework */,
@@ -114,10 +123,8 @@
 			children = (
 				579BE56017B71EEB00FD9118 /* AppDelegate.h */,
 				579BE56117B71EEB00FD9118 /* AppDelegate.m */,
-				579BE56317B71EEB00FD9118 /* Main.storyboard */,
-				579BE56617B71EEB00FD9118 /* ViewController.h */,
-				579BE56717B71EEB00FD9118 /* ViewController.m */,
-				579BE56917B71EEB00FD9118 /* Images.xcassets */,
+				57F0293417B75EFC00E08498 /* View */,
+				57F0293317B75EEF00E08498 /* Resource */,
 				579BE55817B71EEB00FD9118 /* Supporting Files */,
 			);
 			path = MoviePlayerSample;
@@ -150,6 +157,43 @@
 				579BE57917B71EEB00FD9118 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		57F0293317B75EEF00E08498 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				579BE56917B71EEB00FD9118 /* Images.xcassets */,
+				57F0293117B75D6E00E08498 /* Movie.m4v */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
+		57F0293417B75EFC00E08498 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				576E958417B76771004DA52C /* Storyboard.storyboard */,
+				57F0293817B75F6300E08498 /* Local Movie Player */,
+				57F0293917B75F6C00E08498 /* Streaming Movie Player */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		57F0293817B75F6300E08498 /* Local Movie Player */ = {
+			isa = PBXGroup;
+			children = (
+				579BE56617B71EEB00FD9118 /* LocalMoviePlayerViewController.h */,
+				579BE56717B71EEB00FD9118 /* LocalMoviePlayerViewController.m */,
+			);
+			name = "Local Movie Player";
+			sourceTree = "<group>";
+		};
+		57F0293917B75F6C00E08498 /* Streaming Movie Player */ = {
+			isa = PBXGroup;
+			children = (
+				57F0293517B75F3800E08498 /* StreamingMoviePlayerViewController.h */,
+				57F0293617B75F3800E08498 /* StreamingMoviePlayerViewController.m */,
+			);
+			name = "Streaming Movie Player";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,9 +272,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57F0293217B75DA500E08498 /* Movie.m4v in Resources */,
 				579BE56A17B71EEB00FD9118 /* Images.xcassets in Resources */,
 				579BE55C17B71EEB00FD9118 /* InfoPlist.strings in Resources */,
-				579BE56517B71EEB00FD9118 /* Main.storyboard in Resources */,
+				576E958517B76771004DA52C /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,7 +294,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				579BE56817B71EEB00FD9118 /* ViewController.m in Sources */,
+				579BE56817B71EEB00FD9118 /* LocalMoviePlayerViewController.m in Sources */,
+				57F0293717B75F3800E08498 /* StreamingMoviePlayerViewController.m in Sources */,
 				579BE56217B71EEB00FD9118 /* AppDelegate.m in Sources */,
 				579BE55E17B71EEB00FD9118 /* main.m in Sources */,
 			);
@@ -280,14 +326,6 @@
 				579BE55B17B71EEB00FD9118 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		579BE56317B71EEB00FD9118 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				579BE56417B71EEB00FD9118 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		579BE57917B71EEB00FD9118 /* InfoPlist.strings */ = {
@@ -332,7 +370,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -363,7 +401,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -454,6 +492,7 @@
 				579BE58217B71EEB00FD9118 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		579BE58317B71EEB00FD9118 /* Build configuration list for PBXNativeTarget "MoviePlayerSampleTests" */ = {
 			isa = XCConfigurationList;
@@ -462,6 +501,7 @@
 				579BE58517B71EEB00FD9118 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
