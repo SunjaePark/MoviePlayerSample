@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4488.2" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="tWI-FH-7qg">
+    <dependencies>
+        <deployment defaultVersion="1552" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3715.3"/>
+    </dependencies>
+    <scenes>
+        <!--Movie Player View Controller-->
+        <scene sceneID="BTe-sc-2vc">
+            <objects>
+                <viewController id="tWI-FH-7qg" customClass="MoviePlayerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CKz-1P-KAQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Mo1-kV-Qlo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Xbp-fu-hyq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PCE-BQ-rfd">
+                                <rect key="frame" x="20" y="27" width="222" height="30"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="222" id="E4r-Jb-mEY"/>
+                                    <constraint firstAttribute="height" constant="30" id="bN6-xb-yuP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cdz-9M-Xgf">
+                                <rect key="frame" x="0.0" y="67" width="320" height="240"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="Hyv-oT-69O"/>
+                                    <constraint firstAttribute="width" constant="320" id="eZ3-xX-k7d"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sHH-CR-YSs">
+                                <rect key="frame" x="250" y="27" width="50" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="WeF-lc-OvT"/>
+                                    <constraint firstAttribute="width" constant="50" id="zCD-Ss-Ko2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Play">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playButtonTouched:" destination="tWI-FH-7qg" eventType="touchUpInside" id="EZL-mF-xvJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sHH-CR-YSs" firstAttribute="leading" secondItem="PCE-BQ-rfd" secondAttribute="trailing" constant="8" id="4ck-MS-hNG"/>
+                            <constraint firstAttribute="centerX" secondItem="cdz-9M-Xgf" secondAttribute="centerX" id="C23-jv-kUG"/>
+                            <constraint firstItem="PCE-BQ-rfd" firstAttribute="top" secondItem="Xbp-fu-hyq" secondAttribute="top" constant="27" id="YDO-fh-ZXe"/>
+                            <constraint firstItem="sHH-CR-YSs" firstAttribute="top" secondItem="PCE-BQ-rfd" secondAttribute="top" id="aoa-Wn-GsX"/>
+                            <constraint firstItem="PCE-BQ-rfd" firstAttribute="leading" secondItem="Xbp-fu-hyq" secondAttribute="leading" constant="20" id="d9G-4D-UHl"/>
+                            <constraint firstItem="cdz-9M-Xgf" firstAttribute="top" secondItem="PCE-BQ-rfd" secondAttribute="bottom" constant="10" id="j0l-d3-Hx5"/>
+                            <constraint firstAttribute="trailing" secondItem="sHH-CR-YSs" secondAttribute="trailing" constant="20" id="vFT-0z-ggJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="moviePlayerContainerView" destination="cdz-9M-Xgf" id="no9-0J-dE7"/>
+                        <outlet property="movieUrlField" destination="PCE-BQ-rfd" id="5bH-zm-1ma"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e0C-iR-rVK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="98" y="-104"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

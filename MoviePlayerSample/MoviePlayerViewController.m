@@ -1,25 +1,24 @@
 //
-//  StreamingMoviePlayerViewController.m
+//  MoviePlayerViewController.m
 //  MoviePlayerSample
 //
-//  Created by Heaven on 13. 8. 11..
+//  Created by Heaven on 13. 8. 12..
 //  Copyright (c) 2013년 Heaven. All rights reserved.
 //
 
-#import "StreamingMoviePlayerViewController.h"
+#import "MoviePlayerViewController.h"
 #import <MediaPlayer/MediaPlayer.h>
 
-@interface StreamingMoviePlayerViewController ()
+@interface MoviePlayerViewController ()
 
-@property (strong, nonatomic) NSURL *movieUrl;
 @property (strong, nonatomic) MPMoviePlayerController *moviePlayerController;
 
 @property (weak, nonatomic) IBOutlet UITextField *movieUrlField;
-@property (weak, nonatomic) IBOutlet UIView *playerContainerView;
+@property (weak, nonatomic) IBOutlet UIView *moviePlayerContainerView;
 
 @end
 
-@implementation StreamingMoviePlayerViewController
+@implementation MoviePlayerViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -35,12 +34,21 @@
     
     self.movieUrlField.text = @"http://devimages.apple.com/iphone/samples/bipbop/gear1/prog_index.m3u8";
     
-    self.moviePlayerController = [[MPMoviePlayerController alloc] initWithContentURL:self.movieUrl];
+    self.moviePlayerController = [MPMoviePlayerController new];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+}
+
+#pragma mark - Movie Player Controller
+-(void)createAndPlayMovieForURL:(NSURL *)movieURL sourceType:(MPMovieSourceType)sourceType
+{
+    [self createAndConfigurePlayerWithURL:movieURL sourceType:sourceType];
+    
+    /* Play the movie! */
+    [self.moviePlayerController play];
 }
 
 -(void)createAndConfigurePlayerWithURL:(NSURL *)movieURL sourceType:(MPMovieSourceType)sourceType
@@ -64,23 +72,15 @@
     
     self.moviePlayerController.backgroundView.backgroundColor = [UIColor lightGrayColor];
     
-    self.moviePlayerController.view.frame = CGRectMake(0, 0,
-                                                       CGRectGetWidth(self.playerContainerView.frame),
-                                                       CGRectGetHeight(self.playerContainerView.frame));
-    [self.playerContainerView addSubview:self.moviePlayerController.view];
+    if (![self.moviePlayerContainerView.subviews containsObject:self.moviePlayerController.view]) {
+        self.moviePlayerController.view.frame = self.moviePlayerContainerView.bounds;
+        [self.moviePlayerContainerView addSubview:self.moviePlayerController.view];
+    }
     
     /* Indicate the movie player allows AirPlay movie playback. */
     self.moviePlayerController.allowsAirPlay = YES;
     
     [self.moviePlayerController prepareToPlay];
-}
-
--(void)createAndPlayMovieForURL:(NSURL *)movieURL sourceType:(MPMovieSourceType)sourceType
-{
-    [self createAndConfigurePlayerWithURL:movieURL sourceType:sourceType];
-    
-    /* Play the movie! */
-    [self.moviePlayerController play];
 }
 
 -(void)playMovieStream:(NSURL *)movieFileURL
@@ -93,8 +93,16 @@
     [self createAndPlayMovieForURL:movieFileURL sourceType:movieSourceType];
 }
 
-- (IBAction)playButtonTouched:(UIButton *)sender {
+- (NSURL *)movieUrl
+{
+    NSString *moviePath = [[NSBundle mainBundle] pathForResource:@"Movie" ofType:@"m4v"];
+    if (moviePath)
+        return [NSURL fileURLWithPath:moviePath];
     
+    return nil;
+}
+
+- (IBAction)playButtonTouched:(UIButton *)sender {
 	if (self.movieUrlField.text.length > 0)
 	{
 		NSURL *theMovieURL = [NSURL URLWithString:self.movieUrlField.text];
@@ -103,7 +111,7 @@
 			if ([theMovieURL scheme])	// sanity check on the URL
                 [self playMovieStream:theMovieURL];
 		}
-	}
+	}    
 }
 
 @end
